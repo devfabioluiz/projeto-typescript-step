@@ -4,7 +4,6 @@ var Status;
     Status["Ativo"] = "ATIVO";
     Status["Inativo"] = "INATIVO";
     Status["Pendente"] = "PENDENTE";
-    Status["Pendente2"] = "pendente";
     Status["Cancelado"] = "CANCELADO";
 })(Status || (Status = {}));
 function processarPedido(status) {
@@ -17,9 +16,6 @@ function processarPedido(status) {
             break;
         case Status.Pendente:
             console.log("Pedido pendente. Aguardando confirmação de pagamento.");
-            break;
-        case Status.Pendente2:
-            console.log("teste do minusculo");
             break;
         case Status.Cancelado:
             console.log("Pedido cancelado. Estorno será processado em 3 dias úteis.");
