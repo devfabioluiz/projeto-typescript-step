@@ -1,7 +1,7 @@
 "use strict";
-// src/break-continue.ts
 const listaProdutos = [
     { id: 1, nome: "Notebook", preco: 3500 },
+    { id: 5, nome: "Mouse", preco: 89 },
     { id: 2, nome: "Mouse", preco: 89 },
     { id: 3, nome: "Teclado", preco: 199 },
     { id: 4, nome: "Monitor", preco: 1200 },

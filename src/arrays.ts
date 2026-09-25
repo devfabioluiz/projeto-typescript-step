@@ -30,7 +30,9 @@ console.log(
 );
 
 // --- map: nomes dos produtos ---
-const nomesProdutos = produtos.map((p) => p.nome);
+const nomesProdutos = produtos.map((p) => {
+  return { nome: p.nome, preco: p.preco * 2 };
+});
 console.log("Produtos:", nomesProdutos);
 
 // --- find: buscar por ID ---
@@ -43,7 +45,7 @@ console.log(`Total: R$ ${total}`);
 
 // --- some/every ---
 const temCaro = produtos.some((p) => p.preco > 3000);
-const todosDisponiveis = disponiveis.every((p) => p.emEstoque);
+const todosDisponiveis = produtos.every((p) => p.emEstoque);
 console.log("Tem caro?", temCaro);
 console.log("Todos disponíveis?", todosDisponiveis);
 
