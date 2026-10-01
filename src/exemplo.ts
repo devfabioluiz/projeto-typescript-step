@@ -1,11 +1,13 @@
-export {};
+const nomes: string[] = ["Ana", "Bob", "Carlos"];
 
-function pegarPrimeiro<T>(arr: T[]): T {
-  return arr[0];
+function processarLista(lista: string[], callback: (item: string) => void) {
+  for (const item of lista) {
+    callback(item);
+  }
 }
 
-const nome2 = pegarPrimeiro(["Ana", "João"]); // tipo: string
-const numero2 = pegarPrimeiro([10, 20, 30]); // tipo: number
+const dizerOla = (nome: string) => {
+  console.log("Olá," + nome);
+};
 
-// console.log(nome2 * 2);
-console.log(numero2 * 2);
+console.log(processarLista(nomes, dizerOla));
